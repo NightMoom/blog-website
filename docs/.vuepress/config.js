@@ -2,7 +2,7 @@
  * @Author: zsmya
  * @Date: 2022-05-25 11:24:28
  * @LastEditors: zsmya
- * @LastEditTime: 2022-05-27 10:13:20
+ * @LastEditTime: 2022-05-27 11:06:51
  * @FilePath: /vuepress-starter/docs/.vuepress/config.js
  * @Description: 
  * Copyright (c) 2022 by zsmya, All Rights Reserved. 
@@ -21,6 +21,7 @@ module.exports = {
     subSidebar: 'auto',
     lastUpdated: '更新时间:',
     author: 'zsmya',
+    authorAvatar: '/logo.jpeg',
     nav: [
       { text: '首页', link: '/' },
       {
@@ -88,6 +89,7 @@ module.exports = {
         target: '_blank'
       }
     ],
+
     vssueConfig: {
       platform: 'github',
       owner: 'NightMoom',
