@@ -2,7 +2,7 @@
  * @Author: zsmya
  * @Date: 2022-05-25 11:24:28
  * @LastEditors: zsmya
- * @LastEditTime: 2022-06-06 14:47:04
+ * @LastEditTime: 2022-06-06 15:06:44
  * @FilePath: /vuepress-starter/docs/.vuepress/config.js
  * @Description: 
  * Copyright (c) 2022 by zsmya, All Rights Reserved. 
@@ -120,7 +120,12 @@ module.exports = {
         "Variable",
         "FragShader",
         "Sampler",
-        "FnIn"
+        "FnIn",
+        'VarPrecision',
+        "Fn",
+        "Struct",
+        "Discard",
+        "Array"
       ],
     },
     valineConfig,
