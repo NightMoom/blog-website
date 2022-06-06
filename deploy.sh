@@ -26,9 +26,10 @@ cd ~/Desktop/vuepress-starter
 cd ./docs/.vuepress/dist
 cp -fr * ~/Desktop/publish-web/ 
 
+cd ~/Desktop/publish-web/ 
 
-# git add .
-# git commit -m 'publish'
+git add .
+git commit -m 'publish'
 
-# git pull origin publish
-# git push origin publish
+git pull origin publish
+git push origin publish
