@@ -1,5 +1,7 @@
 ---
 title: "discard舍弃片元"
+date: 2022-06-06 15:27:00
+publish: false
 ---
 
 `discard`关键字通常出现在片元着色器的 `if` 语句或 `for` 语句中，`discard`的使用语法就像`for`语句中的`continue`和`break`关键字一样，直接编写 discard;即可,但是`discard`的功能比较特殊，专门用于着色器片元处理。
