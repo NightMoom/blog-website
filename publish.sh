@@ -1,20 +1,17 @@
-#!/usr/bin/env sh
+#!/bin/bash
 set -e 
 
-yarn build:website
+yarn build:docs
 
-# website
+cp -rf ./docs/.vuepress/dist/* ~/Desktop/publish/
 
-cd ~/Desktop/publish-web/ 
-git checkout -b website
+cd ~/Desktop/publish/
 
-cd ~/Desktop/vuepress-starter
+echo $*
 
-cd ./docs/.vuepress/dist/
-cp -fr * ~/Desktop/publish-web/ 
-
-cd ~/Desktop/publish-web/ 
 git add .
-git commit -m ':memo: update'
-git pull origin website
-git push origin website
+git commit -m $*
+
+git pull origin publish
+
+git push origin publish
