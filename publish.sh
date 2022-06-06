@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e 
 
-yarn build:docs
+yarn docs:build
 
 cp -rf ./docs/.vuepress/dist/* ~/Desktop/publish/
 
