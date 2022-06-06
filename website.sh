@@ -14,7 +14,7 @@ cd ~/Desktop/website/
 echo $1
 
 git add .
-git commit -m $*
+git commit -m "$*"
 
 git pull origin website
 

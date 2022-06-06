@@ -10,7 +10,7 @@ cd ~/Desktop/publish/
 echo $*
 
 git add .
-git commit -m $*
+git commit -m "$*"
 
 git pull origin publish
 
