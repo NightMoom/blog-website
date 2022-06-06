@@ -11,5 +11,7 @@ git add .
 git status -s
 git commit -m "$*"
 
-git pull origin main
+
+git pull  origin main
+
 git push origin main
