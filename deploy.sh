@@ -8,7 +8,7 @@ echo $1
 npm run docs:build
 
 # git add .
-git add -A
+git add .
 
 git status -s
 git commit -m $1

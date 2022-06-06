@@ -2,7 +2,7 @@
  * @Author: zsmya
  * @Date: 2022-05-25 11:24:28
  * @LastEditors: zsmya
- * @LastEditTime: 2022-05-27 11:06:51
+ * @LastEditTime: 2022-06-06 11:27:49
  * @FilePath: /vuepress-starter/docs/.vuepress/config.js
  * @Description: 
  * Copyright (c) 2022 by zsmya, All Rights Reserved. 
@@ -16,6 +16,7 @@ module.exports = {
   description: '不积跬步无以至千里',
   theme: 'vuepress-theme-reco',
   themeConfig: {
+    type: 'blog',
     search: true,
     searchMaxSuggestions: 10,
     subSidebar: 'auto',
@@ -24,50 +25,50 @@ module.exports = {
     authorAvatar: '/logo.jpeg',
     nav: [
       { text: '首页', link: '/' },
-      {
-        text: '前端',
-        items: [
-          {
-            text: '基础',
-            items: [
-              {
-                text: 'JavaScript',
-                link: '/javascript/'
-              },
-              {
-                text: 'css',
-                link: '/css/'
-              },
-              {
-                text: 'Vue',
-                link: '/vue/'
-              }
-            ]
-          },
-        ]
-      },
-      {
-        text: '框架',
-        items: [
-          {
-            text: 'Vue',
-            link: '/vue/'
-          }
-        ],
-      },
-      {
-        text: '地图相关',
-        items: [
-          {
-            text: 'openlayers',
-            link: '/openlayers/'
-          },
-          {
-            text: '高德地图',
-            link: '/amap/ '
-          }
-        ]
-      },
+      // {
+      //   text: '前端',
+      //   items: [
+      //     {
+      //       text: '基础',
+      //       items: [
+      //         {
+      //           text: 'JavaScript',
+      //           link: '/javascript/'
+      //         },
+      //         {
+      //           text: 'css',
+      //           link: '/css/'
+      //         },
+      //         {
+      //           text: 'Vue',
+      //           link: '/vue/'
+      //         }
+      //       ]
+      //     },
+      //   ]
+      // },
+      // {
+      //   text: '框架',
+      //   items: [
+      //     {
+      //       text: 'Vue',
+      //       link: '/vue/'
+      //     }
+      //   ],
+      // },
+      // {
+      //   text: '地图相关',
+      //   items: [
+      //     {
+      //       text: 'openlayers',
+      //       link: '/openlayers/'
+      //     },
+      //     {
+      //       text: '高德地图',
+      //       link: '/amap/ '
+      //     }
+      //   ]
+      // },
       {
         text: 'WebGL',
         items: [
@@ -89,14 +90,34 @@ module.exports = {
         target: '_blank'
       }
     ],
-
+    sidebar: {
+      '/shader/': [
+        '',
+        'ShaderVar',
+        'ShaderConst',
+        'PrimitiveType',
+        'ShaderVec',
+        'ShaderMatrix',
+        'ShaderProcess',
+        'VarIn',
+        "Variable",
+        "FragShader",
+        "Sampler",
+        "FnIn"
+      ],
+    },
     vssueConfig: {
       platform: 'github',
       owner: 'NightMoom',
       repo: 'https://github.com/NightMoom/blog-issue.git',
       clientId: '8a5ecbaf6a60971d1318',
       clientSecret: '1d02e9a47e0b91a7b78faf29e8148ce2d01e701c'
-    }
+    },
+    // keyPage: {
+    //   keys: ['c930e1a12063e11fddd0cb9221003ad7'],
+    //   color: '#42b983',
+    //   lineColor: '#42b983'
+    // }
   },
   locales: {
     '/': {
