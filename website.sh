@@ -10,3 +10,12 @@ cp -rf ./docs/.vuepress/dist/* ~/Desktop/website/
 
 
 cd ~/Desktop/website/
+
+echo $1
+
+git add .
+git commit -m $*
+
+git pull origin website
+
+git push origin website

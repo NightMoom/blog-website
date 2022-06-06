@@ -9,7 +9,7 @@ echo $1
 git add .
 
 git status -s
-git commit -m $1
+git commit -m $*
 
 git pull origin main
 git push origin main
