@@ -2,12 +2,29 @@
  * @Author: zsmya
  * @Date: 2022-05-25 11:24:28
  * @LastEditors: zsmya
- * @LastEditTime: 2022-06-06 11:27:49
+ * @LastEditTime: 2022-06-06 14:47:04
  * @FilePath: /vuepress-starter/docs/.vuepress/config.js
  * @Description: 
  * Copyright (c) 2022 by zsmya, All Rights Reserved. 
  */
 
+const vssueConifg = {
+  website: {
+    
+  },
+  publish: {
+    platform: 'github',
+    owner: 'NightMoom',
+    repo: 'https://github.com/NightMoom/blog-issue.git',
+    clientId: '8a5ecbaf6a60971d1318',
+    clientSecret: '1d02e9a47e0b91a7b78faf29e8148ce2d01e701c'
+  }
+}
+
+const valineConfig = {
+  appId: "JBrIAPnTlHFjaR0YQoklrcJa-gzGzoHsz",
+  appKey: "UImCjPCygwl25mr17z9MdzdR"
+}
 const base = process.env.mode === 'website' ? '/blog-website/' : '/'
 console.log(base)
 module.exports = {
@@ -106,13 +123,14 @@ module.exports = {
         "FnIn"
       ],
     },
-    vssueConfig: {
-      platform: 'github',
-      owner: 'NightMoom',
-      repo: 'https://github.com/NightMoom/blog-issue.git',
-      clientId: '8a5ecbaf6a60971d1318',
-      clientSecret: '1d02e9a47e0b91a7b78faf29e8148ce2d01e701c'
-    },
+    valineConfig,
+    // vssueConfig: {
+    //   platform: 'github',
+    //   owner: 'NightMoom',
+    //   repo: 'https://github.com/NightMoom/blog-issue.git',
+    //   clientId: '8a5ecbaf6a60971d1318',
+    //   clientSecret: '1d02e9a47e0b91a7b78faf29e8148ce2d01e701c'
+    // },
     // keyPage: {
     //   keys: ['c930e1a12063e11fddd0cb9221003ad7'],
     //   color: '#42b983',
