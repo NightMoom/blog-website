@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs --no-cache",
-    "docs:build": "vuepress build docs --no-cache ",
+    "docs:dev": "cross-env mode=local vuepress dev docs --no-cache",
+    "docs:build": "cross-env mode=publish vuepress build docs --no-cache ",
     "build:website": "cross-env mode=website vuepress build docs --no-cache "
   },
   "devDependencies": {

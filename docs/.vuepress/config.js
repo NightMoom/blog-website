@@ -2,7 +2,7 @@
  * @Author: zsmya
  * @Date: 2022-05-25 11:24:28
  * @LastEditors: zsmya
- * @LastEditTime: 2022-06-06 18:16:42
+ * @LastEditTime: 2022-06-07 10:03:22
  * @FilePath: /vuepress-starter/docs/.vuepress/config.js
  * @Description: 
  * Copyright (c) 2022 by zsmya, All Rights Reserved. 
@@ -10,14 +10,25 @@
 
 const vssueConifg = {
   website: {
-    
+    platform: 'github',
+    owner: 'NightMoom',
+    repo: 'blog-issue',
+    clientId: 'c193cff46a6dc1761c31',
+    clientSecret: 'a7fc7378348d5dc42485a00cd3fa1dc32239ff5d'
   },
   publish: {
     platform: 'github',
     owner: 'NightMoom',
-    repo: 'https://github.com/NightMoom/blog-issue.git',
-    clientId: '8a5ecbaf6a60971d1318',
-    clientSecret: '1d02e9a47e0b91a7b78faf29e8148ce2d01e701c'
+    repo: 'blog-issue',
+    clientId: '3ce182f7af8f35589f82',
+    clientSecret: '245f560c140ef9ab842bfa964f83d738b1106a78'
+  },
+  local: {
+    platform: 'github',
+    owner: 'NightMoom',
+    repo: 'blog-issue',
+    clientId: '64d2f887fc2ce7ed9f1e',
+    clientSecret: 'de63affa66442f55967928a6119d9fbc95cc3f3b'  
   }
 }
 
@@ -25,8 +36,11 @@ const valineConfig = {
   appId: "JBrIAPnTlHFjaR0YQoklrcJa-gzGzoHsz",
   appKey: "UImCjPCygwl25mr17z9MdzdR"
 }
-const base = process.env.mode === 'website' ? '/blog-website/' : '/'
+const mode = process.env.mode;
+
+const base = mode === 'website' ? '/blog-website/' : '/'
 console.log(base)
+console.log(vssueConifg[mode])
 module.exports = {
   base: process.env.mode === 'website' ? '/blog-website/' : '/',
   title: '深夜书店',
@@ -130,13 +144,7 @@ module.exports = {
       ],
     },
     // valineConfig,
-    vssueConfig: {
-      platform: 'github',
-      owner: 'NightMoom',
-      repo: 'https://github.com/NightMoom/blog-issue.git',
-      clientId: '8a5ecbaf6a60971d1318',
-      clientSecret: '1d02e9a47e0b91a7b78faf29e8148ce2d01e701c'
-    },
+    vssueConfig: vssueConifg[mode],
     // keyPage: {
     //   keys: ['c930e1a12063e11fddd0cb9221003ad7'],
     //   color: '#42b983',
