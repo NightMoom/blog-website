@@ -12,7 +12,8 @@
     "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.0",
     "cross-env": "^7.0.3",
     "vuepress": "^1.9.7",
-    "vuepress-plugin-cursor-effects": "^1.1.4"
+    "vuepress-plugin-cursor-effects": "^1.1.4",
+    "vuepress-plugin-md-enhance": "^1.30.0"
   },
   "dependencies": {
     "vuepress-theme-reco": "^1.6.11"

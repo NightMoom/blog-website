@@ -2,7 +2,7 @@
  * @Author: zsmya
  * @Date: 2022-05-25 11:24:28
  * @LastEditors: zsmya
- * @LastEditTime: 2022-06-07 10:03:22
+ * @LastEditTime: 2022-06-15 15:08:05
  * @FilePath: /vuepress-starter/docs/.vuepress/config.js
  * @Description: 
  * Copyright (c) 2022 by zsmya, All Rights Reserved. 
@@ -101,6 +101,19 @@ module.exports = {
       //   ]
       // },
       {
+        text: "Vue3",
+        items: [
+          {
+            text: "Vue3指南",
+            link: '/vue/vue3/guide/'
+          },
+          {
+            text: 'Vue3技巧',
+            link: '/vue/vue3/skill/'
+          }
+        ]
+      },
+      {
         text: 'WebGL',
         items: [
           {
@@ -142,6 +155,11 @@ module.exports = {
         "Array",
         "Refer"
       ],
+      '/vue/vue3/guide/': [
+        '',
+        'Initialize',
+        'Lifecycle'
+      ]
     },
     // valineConfig,
     vssueConfig: vssueConifg[mode],
@@ -182,6 +200,14 @@ module.exports = {
       size: 2, // size of the particle, default: 2
       shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
       zIndex: 999999999, // z-index property of the canvas, default: 999999999
-    }]
+    }],
+    [
+      'md-enhance',
+      {
+        codegroup: true,
+        mermaid: true,
+        container: true,
+      }
+    ]
   ],
 }
