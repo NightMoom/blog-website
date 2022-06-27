@@ -7,7 +7,7 @@ publish: false
 ---
 ## 实例化
 
-Vue2实例化只需要使用`new 关键字`,在Vue3中，需要引入`createApp`方法
+Vue2实例化只需要使用`new 关键字`,在Vue3中,需要引入`createApp`方法
 
 :::: code-group
 
@@ -39,8 +39,8 @@ new Vue({
 
 ## 全局对象
 
-在Vue2中，如果添加一个可以在应用的任何组件实例中访问的全局 property， 我们可以在main.js中使用 `Vue.prototype`
-但是在Vue3中，不再支持使用`Vue.prototype`来添加一个全局的property，而使用`globalProperties`
+在Vue2中,如果添加一个可以在应用的任何组件实例中访问的全局 property, 我们可以在main.js中使用 `Vue.prototype`
+但是在Vue3中,不再支持使用`Vue.prototype`来添加一个全局的property,而使用`globalProperties`
 
 :::: code-group
 
@@ -69,7 +69,7 @@ Vue.prototype.$echarts = echarts
 
 ::::
 
-在绑定全局对象之后，vue2里面可以使用`this`关键字来获取到，而在vue3里面，`<script setup></script>` 中,不存在this，需要使用 `getCurrentInstance`
+在绑定全局对象之后,vue2里面可以使用`this`关键字来获取到,而在vue3里面,`<script setup></script>` 中,不存在this,需要使用 `getCurrentInstance`
 
 :::: code-group
 
@@ -82,9 +82,7 @@ const install = getCurrentInstance() as ComponentInternalInstance
 const { globalProperties } = install.appContext.config
 
 ```
-`getCurrentInstance()` 方法返回值是**当前实例或者null**
-
-使用 `as ComponentInternalInstance` 可以避免类型推导为null
+`getCurrentInstance()` 方法返回值是**当前实例或者null**,可以使用 `as ComponentInternalInstance` 可以避免类型推导为null
 
 :::
 
